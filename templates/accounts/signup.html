@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h1>Sign up</h1>
+<section class="common-form">
+    <form class="form-horizontal" method="post" name="user">
+        <div class="form-group">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="submit" class="btn btn-primary">Sign up</button>
+        </div>
+    </form>
+</section>
+{% endblock %}
